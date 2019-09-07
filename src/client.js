@@ -47,7 +47,7 @@ var clientFactory = function (fetchFn, serializer, deserializer) {
                 headers: headersWithCustom,
                 credentials: "include",
             };
-            console.log('RPC Options are....', opts);
+            console.log('RPC Options are....', JSON.stringify(opts));
             return fetchFn(endpoint + method, opts).then(function (res) {
                 // 200 is the only valid response
                 if (res.status !== 200) {
